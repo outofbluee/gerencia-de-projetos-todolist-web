@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>TODO List</title>
+</head>
+<body>
+    <h1>TODO List</h1>
+    <div class="content">
+        <div class="content--add-todo">
+            <!-- input, botao -->
+            <input type="text" id="input-new-todo-name" autocomplete="off" placeholder="Todo name">
+
+            <input type="text" id="input-new-todo-description" autocomplete="off" placeholder="Todo description">
+
+            <div class="priority-selector">
+                <button id="priority-btn" onclick="togglePriorityMenu()">P3</button>
+
+                <div id="priority-menu" class="hidden">
+                    <div onclick="setPriority(1)">P1</div>
+                    <div onclick="setPriority(2)">P2</div>
+                    <div onclick="setPriority(3)">P3</div>
+                </div>
+            </div>
+
+            <button id="btn-new-todo" onclick="newTask()" title="Click to create a new todo">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                   <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+               </svg>
+            </button>
+        </div>
+        <div class="content--body">
+            <!-- lista -->
+            <ul id="todo-list">
+                <p style="text-align: center; font-size: large;">
+                    Content not found
+                </p>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
